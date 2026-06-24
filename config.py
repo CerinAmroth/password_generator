@@ -1,21 +1,19 @@
-FRM_COLOR = '#0d0a0c'
-TXT_COLOR_1 = '#99ff66'
-TXT_COLOR_2 = '#ffffff'
-TXT_COLOR_3 = '#000000'
-BTN_COLOR_1 = '#99ff66'
-BTN_COLOR_2 = '#ffffff'
-BTN_COLOR_3 = '#000000'
+COLOR_DARK = '#0d0a0c'
+COLOR_LIME = '#99ff66'
+COLOR_BLACK = '#000000'
+COLOR_WHITE = '#ffffff'
 
-BIG_FONT = ('Constantia', 27)
-MID_FONT = ('Constantia', 25)
-LIT_FONT = ('Constantia', 18)
+FONT_VERY_LARGE = ('Constantia', 35, 'bold')
+FONT_LARGE = ('Constantia', 30)
+FONT_MEDIUM = ('Constantia', 25)
+FONT_SMALL = ('Constantia', 20)
 
 BOX_PARAMS = {
-    "fg_color": FRM_COLOR,
-    "hover_color": TXT_COLOR_2,
-    "text_color": TXT_COLOR_2,
-    "border_color": TXT_COLOR_2,
-    "font": LIT_FONT
+    "fg_color": COLOR_DARK,
+    "hover_color": COLOR_WHITE,
+    "text_color": COLOR_WHITE,
+    "border_color": COLOR_WHITE,
+    "font": FONT_SMALL
 }
 
 ENTRY_PARAMS = {
@@ -24,7 +22,7 @@ ENTRY_PARAMS = {
     "border_width": 0,
     "corner_radius": 40,
     "justify": 'c',
-    "font": ('Arial', 20, 'bold')
+    "font": FONT_SMALL
 }
 
 MSG_PARAMS = {
@@ -33,32 +31,101 @@ MSG_PARAMS = {
     "title": 'Ошибочка',
     "icon": 'info',
     "justify": 'center',
-    "button_color": BTN_COLOR_2,
-    "button_hover_color": BTN_COLOR_1,
-    "button_text_color": BTN_COLOR_3
+    "button_color": COLOR_WHITE,
+    "button_hover_color": COLOR_LIME,
+    "button_text_color": COLOR_BLACK
 }
 
-BTN_PARAMS_1 = {
+BTN_PARAMS = {
     "width": 50,
     "height": 40,
     "corner_radius": 50,
-    "fg_color": BTN_COLOR_1,
-    "hover_color": BTN_COLOR_2,
-    "text_color": BTN_COLOR_3,
-    "font": ('Constantia', 20)
+    "fg_color": COLOR_LIME,
+    "hover_color": COLOR_WHITE,
+    "text_color": COLOR_BLACK,
+    "font": FONT_SMALL
 }
 
-BTN_PARAMS_2 = {
+MINI_BTN_PARAMS = {
     "width": 50,
     "height": 20,
     "corner_radius": 10,
-    "fg_color": BTN_COLOR_2,
-    "hover_color": BTN_COLOR_1,
-    "text_color": BTN_COLOR_3,
-    "font": ('Constantia', 18)
+    "fg_color": COLOR_WHITE,
+    "hover_color": COLOR_LIME,
+    "text_color": COLOR_BLACK,
+    "font": FONT_SMALL
 }
 
-APP_MESSAGES = {
+MESSAGE_LBL_PARAMS = {
+    'text': '',
+    'text_color': COLOR_LIME,
+    'font': FONT_MEDIUM
+}
+MESSAGE_LBL_PLACE = {
+    'relx': 0.5,
+    'rely': 0.5,
+    'anchor': 'c'
+}
+
+FINAL_LBL_PARAMS = {
+    'text': 'Хотите повторить?',
+    'text_color': COLOR_WHITE,
+    'font':FONT_LARGE
+}
+
+FINAL_LBL_PLACE = {
+    'relx': 0.5,
+    'rely': 0.75,
+    'anchor': 'c'
+}
+
+GREETINGS_PAGE_DATA = {
+    'labels': [
+        ('Приветствую тебя!', COLOR_WHITE, FONT_MEDIUM, 0.5, 0.15),
+        ('Это генератор паролей', COLOR_LIME, FONT_MEDIUM, 0.5, 0.3),
+        ('Он поможет тебе', COLOR_WHITE, FONT_MEDIUM, 0.5, 0.45),
+        ('надежно защитить', COLOR_LIME, FONT_MEDIUM, 0.5, 0.6),
+        ('твои аккаунты и данные!', COLOR_WHITE, FONT_MEDIUM, 0.5, 0.75)
+    ],
+    'buttons': [
+        ('Выйти', 'exit_app', 0.3, 0.9),
+        ('Далее', 'start_app', 0.7, 0.9)
+    ]
+}
+
+MAIN_PAGE_DATA = {
+    'labels': [
+        ('Сколько паролей\n нужно сгенерировать?', COLOR_LIME, FONT_MEDIUM, 0.5, 0.1),
+        ('(Введите значение от 1 до 10)', COLOR_WHITE, FONT_SMALL, 0.5, 0.2),
+        ('Необходимая длина пароля', COLOR_LIME, FONT_MEDIUM, 0.5, 0.35),
+        ('(Введите значение от 5 до 20)', COLOR_WHITE, FONT_SMALL, 0.5, 0.4),
+        ('Какие символы использовать?', COLOR_LIME, FONT_MEDIUM, 0.5, 0.55)
+    ],
+    'entrys': [
+        ('count', 0.5, 0.27),
+        ('length', 0.5, 0.48)
+    ],
+    'boxes': [
+        ('digits', '1 2 3', 0.2, 0.65),
+        ('lowercases', 'a b c', 0.5, 0.65),
+        ('uppercases', 'A B C', 0.8, 0.65),
+        ('symbols', '# % &', 0.35, 0.75),
+        ('excludes', 'Убрать похожие\n(i,I,l,L,1,!,o,O,0)', 0.7, 0.75)
+    ]
+}
+
+FINAL_PAGE_DATA = {
+    'frames': [
+        ('result_frame', 0, 0, 0.7, 0.7),
+        ('button_frame', 0.7, 0, 0.3, 0.7)
+    ],
+    'buttons': [
+        ('Не хочу', 'exit_app', 0.35, 0.9),
+        ('Давай!', 'start_app', 0.65, 0.9)
+    ]
+}
+
+DELAY_MESSAGES = {
     'waiting': [
         'Жду ответа от сервера...', 'Посылаю запрос...',
         'Нужно немного подождать...', 'Дай-ка подумать...',
@@ -77,13 +144,6 @@ APP_MESSAGES = {
         'Был рад поработать с тобой!',
         'Ты это, заходи, если что...',
         'Надеюсь, еще увидимся!'
-    ],
-    'lbl_txt': [
-        'Сколько паролей\n нужно сгенерировать?',
-        '(Введите значение от 1 до 10)',
-        'Необходимая длина пароля',
-        '(Введите значение от 5 до 20)',
-        'Какие символы использовать?'
     ]
 }
 
@@ -96,3 +156,4 @@ ERROR_MESSAGES = {
     'too_high_length': 'Допускается длина пароля не более 20 символов',
     'empty_boxes': 'Не выбран ни один вид символов'
 }
+
