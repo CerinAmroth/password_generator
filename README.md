@@ -34,5 +34,5 @@ A robust desktop utility designed to generate highly secure, customizable random
    ```
 3. Run the application:
    ```bash
-   python main.py
+   python draft.py
    ```
