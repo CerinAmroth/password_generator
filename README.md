@@ -18,7 +18,8 @@ A robust desktop utility designed to generate highly secure, customizable random
 
 ## 📸 Preview
 
-![img.png](img.png)
+<img width="297" height="395" alt="image" src="https://github.com/user-attachments/assets/dcf9448a-c287-4f67-81c0-76c527b5e30f" />
+
 
 
 ## 💻 How to Run
